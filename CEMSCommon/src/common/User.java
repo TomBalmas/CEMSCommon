@@ -1,6 +1,8 @@
 package common;
 
-public abstract class User {
+import java.io.Serializable;
+
+public abstract class User implements Serializable{
 	private long SSN;
 	private String name;
 	private String surName;
