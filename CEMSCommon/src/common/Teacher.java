@@ -10,7 +10,7 @@ public class Teacher extends User {
 	}
 
 	public Teacher(int sSN, String name, String surName, String email, String userName, String password,ArrayList<String> fields) {
-		super(sSN, name, surName, userName, email, password);
+		super(sSN, name, surName, email, userName, password);
 		this.fields=fields;
 	}
 	
