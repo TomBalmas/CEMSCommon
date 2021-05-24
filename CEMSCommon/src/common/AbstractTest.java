@@ -37,10 +37,10 @@ public abstract class AbstractTest implements Serializable{
 		return course;
 	}
 	
-	public AbstractTest(int ID, String authorName, String testName, String course) {
+	public AbstractTest(int ID, String authorName, String title, String course) {
 		this.ID = ID;
 		this.authorName = authorName;
-		this.title = testName;
+		this.title = title;
 		this.course = course;
 	}
 
