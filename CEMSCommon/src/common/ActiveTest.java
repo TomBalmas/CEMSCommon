@@ -1,14 +1,15 @@
 package common;
 
 public class ActiveTest extends AbstractTest {
-	
+
 	private String startTimeTest;
 	private String endTimeTest;
 	private String field;
 
-	public ActiveTest(int ID, String authorName, String testName, String course, String field, String startTimeTest, String endTimeTest) {
-		
-		super(ID, authorName, testName, course);
+	public ActiveTest(int ID, String authorName, String title, String course, String field, String startTimeTest,
+			String endTimeTest) {
+
+		super(ID, authorName, title, course);
 		this.field = field;
 		this.startTimeTest = startTimeTest;
 		this.endTimeTest = endTimeTest;
@@ -28,7 +29,8 @@ public class ActiveTest extends AbstractTest {
 
 	@Override
 	public String toString() {
-		return ID + ":" + testName + ":"+ authorName+course + ":" + startTimeTest + ":" + endTimeTest + ":"+ field;
+		return getID() + ":" + getTitle() + ":" + getAuthorName() + ":" + getCourse() + ":" + startTimeTest + ":"
+				+ endTimeTest + ":" + field;
 	}
-	
+
 }

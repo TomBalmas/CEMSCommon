@@ -44,9 +44,6 @@ public class Question implements Serializable  {
 		this.field = field;
 		this.answers=answers;
 	}
-	public Integer getID() {
-		return ID;
-	}
 	public String getInstructionsForTeacher() {
 		return instructionsForTeacher;
 	}
@@ -61,9 +58,6 @@ public class Question implements Serializable  {
 	}
 	public ArrayList<String> getAnswers() {
 		return answers;
-	}
-	public String getField() {
-		return field;
 	}
 	
 	
