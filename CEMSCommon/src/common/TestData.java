@@ -12,7 +12,6 @@ public class TestData {
 	private Integer average;
 	private Integer median;
 	private ArrayList<Student> examinees;
-	private  Hashtable<String, Question> gradesDistribution = new Hashtable(); 
-	private  Hashtable<String, Question> grades = new Hashtable(); 
+	private Hashtable<String, Question> gradesDistribution = new Hashtable();
+	private Hashtable<String, Question> grades = new Hashtable();
 }
- 
