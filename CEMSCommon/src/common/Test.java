@@ -7,13 +7,6 @@ import java.util.Hashtable;
 import java.util.List;
 
 public class Test implements Serializable {
-	@Override
-	public String toString() {
-		return "Test [ID=" + ID + ", authorName=" + authorName + ", testName=" + testName + ", course=" + course
-				+ ", testDuration=" + testDuration + ", pointsPerQuestion=" + pointsPerQuestion + ", instructions="
-				+ instructions + ", teacherInstructions=" + teacherInstructions + ", field=" + field + ", testData="
-				+ testData + "]";
-	}
 
 	private int ID;
 	private String authorName;
@@ -23,6 +16,9 @@ public class Test implements Serializable {
 	private String pointsPerQuestion;
 	private String instructions;
 	private List<String> questions;
+	private String teacherInstructions;
+	private String field;
+	private TestData testData;
 
 	public int getID() {
 		return ID;
@@ -47,10 +43,6 @@ public class Test implements Serializable {
 	public String getField() {
 		return field;
 	}
-
-	private String teacherInstructions;
-	private String field;
-	private TestData testData;
 
 	public Test(int ID, String authorName, String testName, String course, String testDuration,
 			String pointsPerQuestion, String instructions, String teacherInstructions, String questions, String field) {
@@ -77,6 +69,14 @@ public class Test implements Serializable {
 
 	public List<String> getQuestions() {
 		return questions;
+	}
+
+	@Override
+	public String toString() {
+		return "Test [ID=" + ID + ", authorName=" + authorName + ", testName=" + testName + ", course=" + course
+				+ ", testDuration=" + testDuration + ", pointsPerQuestion=" + pointsPerQuestion + ", instructions="
+				+ instructions + ", teacherInstructions=" + teacherInstructions + ", field=" + field + ", testData="
+				+ testData + "]";
 	}
 
 }
