@@ -1,8 +1,10 @@
 package common;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Hashtable;
+import java.util.List;
 
 public class Test implements Serializable {
 	@Override
@@ -20,6 +22,8 @@ public class Test implements Serializable {
 	private String testDuration;
 	private String pointsPerQuestion;
 	private String instructions;
+	private List<String> questions;
+
 	public int getID() {
 		return ID;
 	}
@@ -49,7 +53,7 @@ public class Test implements Serializable {
 	private TestData testData;
 
 	public Test(int ID, String authorName, String testName, String course, String testDuration,
-			String pointsPerQuestion, String instructions, String teacherInstructions, String field) {
+			String pointsPerQuestion, String instructions, String teacherInstructions, String questions, String field) {
 		this.ID = ID;
 		this.authorName = authorName;
 		this.testName = testName;
@@ -59,12 +63,20 @@ public class Test implements Serializable {
 		this.instructions = instructions;
 		this.teacherInstructions = teacherInstructions;
 		this.field = field;
+		String[] arr = questions.split(":");
+		this.questions = new ArrayList<>();
+		for (String question : arr)
+			this.questions.add(question);
 	}
 
 	public boolean finishTest() {
 		testData = new TestData();
 		return false;
 
+	}
+
+	public List<String> getQuestions() {
+		return questions;
 	}
 
 }
