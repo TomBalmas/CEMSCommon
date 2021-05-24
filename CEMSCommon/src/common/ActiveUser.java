@@ -1,8 +1,5 @@
 package common;
 
-import java.util.ArrayList;
-import java.util.Hashtable;
-
 public class ActiveUser  {
 	private User user;
 	private String userType;

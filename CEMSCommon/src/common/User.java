@@ -3,14 +3,14 @@ package common;
 import java.io.Serializable;
 
 public abstract class User implements Serializable{
-	private long SSN;
+	private int SSN;
 	private String name;
 	private String surName;
 	private String email;
 	private String userName;
 	private String password;
 	
-	public User(long sSN, String name, String surName,  String email, String userName, String password) {
+	public User(int sSN, String name, String surName,  String email, String userName, String password) {
 		SSN = sSN;
 		this.name = name;
 		this.surName = surName;
@@ -19,7 +19,7 @@ public abstract class User implements Serializable{
 		this.password = password;
 	}
 
-	public long getSSN() {
+	public int getSSN() {
 		return SSN;
 	}
 
