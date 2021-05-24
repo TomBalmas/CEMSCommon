@@ -41,15 +41,12 @@ public class Teacher extends User {
 		return false;
 	}
 
-	public Teacher(int sSN, String name, String surName, String email, String userName, String password,
-			String fields) {
+	public Teacher(int sSN, String name, String surName, String email, String userName, String password,String fields) {
 		super(sSN, name, surName, email, userName, password);
-		scheduledTests = new ArrayList<ScheduledTest>();
 		String[] arr = fields.split(":");
-		this.fields = new ArrayList<>();
-		for (String field : arr)
+		this.fields=new ArrayList<String>();
+		for(String field: arr)
 			this.fields.add(field);
-
 	}
 
 	public String toString() {
