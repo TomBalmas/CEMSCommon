@@ -44,4 +44,29 @@ public class Question implements Serializable  {
 		this.field = field;
 		this.answers=answers;
 	}
+	public Integer getID() {
+		return ID;
+	}
+	public String getInstructionsForTeacher() {
+		return instructionsForTeacher;
+	}
+	public String getInstructionsForStudents() {
+		return instructionsForStudents;
+	}
+	public String getQuestionText() {
+		return questionText;
+	}
+	public int getCorrectAnswer() {
+		return correctAnswer;
+	}
+	public ArrayList<String> getAnswers() {
+		return answers;
+	}
+	public String getField() {
+		return field;
+	}
+	
+	
+	
+	
 } 
