@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public abstract class AbstractTest implements Serializable{
 	
-	private int ID;
+	private String id;
 	private String authorName;
 	private String title;
 	private String course;
 	
-	public int getID() {
-		return ID;
+	public String getID() {
+		return id;
 	}
 
 	public void setTitle(String title) {
@@ -37,8 +37,8 @@ public abstract class AbstractTest implements Serializable{
 		return course;
 	}
 	
-	public AbstractTest(int ID, String authorName, String title, String course) {
-		this.ID = ID;
+	public AbstractTest(String id, String authorName, String title, String course) {
+		this.id = id;
 		this.authorName = authorName;
 		this.title = title;
 		this.course = course;

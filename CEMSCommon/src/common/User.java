@@ -3,15 +3,15 @@ package common;
 import java.io.Serializable;
 
 public abstract class User implements Serializable{
-	private int SSN;
+	private String ssn;
 	private String name;
 	private String surName;
 	private String email;
 	private String userName;
 	private String password;
 	
-	public User(int sSN, String name, String surName,  String email, String userName, String password) {
-		SSN = sSN;
+	public User(String ssn, String name, String surName,  String email, String userName, String password) {
+		this.ssn = ssn;
 		this.name = name;
 		this.surName = surName;
 		this.email = email;
@@ -19,8 +19,8 @@ public abstract class User implements Serializable{
 		this.password = password;
 	}
 
-	public int getSSN() {
-		return SSN;
+	public String getSSN() {
+		return ssn;
 	}
 
 	public String getName() {

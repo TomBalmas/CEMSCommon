@@ -41,8 +41,8 @@ public class Teacher extends User {
 		return false;
 	}
 
-	public Teacher(int sSN, String name, String surName, String email, String userName, String password,String fields) {
-		super(sSN, name, surName, email, userName, password);
+	public Teacher(String ssn, String name, String surName, String email, String userName, String password,String fields) {
+		super(ssn, name, surName, email, userName, password);
 		String[] arr = fields.split(":");
 		this.fields=new ArrayList<String>();
 		for(String field: arr)
