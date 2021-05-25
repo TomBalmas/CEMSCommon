@@ -9,14 +9,24 @@ public class ScheduledTest extends AbstractTest {
 	private String startingTime;
 	private int duration;
 	private String belongsToID; // id of the teacher that scheduled the test
+	private String code;
 
 	public ScheduledTest(String id, String authorName, String title, String course, String date, String startingTime,
-			Integer duration, String belongsToID) {
+			Integer duration, String belongsToID, String code) {
 		super(id, authorName, title, course);
 		this.date = date;
 		this.startingTime = startingTime;
 		this.duration = duration;
 		this.belongsToID = belongsToID;
+		this.code = code;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public String getDate() {

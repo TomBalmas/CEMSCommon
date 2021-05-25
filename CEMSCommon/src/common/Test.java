@@ -17,7 +17,8 @@ public class Test extends AbstractTest {
 	}
 
 	public Test(String id, String authorName, String title, String course, Integer testDuration,
-			Integer pointsPerQuestion, String studentInstructions, String teacherInstructions, String questionsString, String field) {
+			Integer pointsPerQuestion, String studentInstructions, String teacherInstructions, String questionsString,
+			String field) {
 		super(id, authorName, title, course);
 		this.testDuration = testDuration;
 		this.pointsPerQuestion = pointsPerQuestion;
@@ -36,9 +37,10 @@ public class Test extends AbstractTest {
 
 	@Override
 	public String toString() {
-		return "Test [ID=" + getID() + ", authorName=" + getAuthorName() + ", testName=" + getTitle() + ", course=" + getCourse()
-				+ ", testDuration=" + testDuration + ", pointsPerQuestion=" + pointsPerQuestion + ", instructions="
-				+ studentInstructions + ", teacherInstructions=" + teacherInstructions + ", field=" + field + "]";
+		return "Test [ID=" + getID() + ", authorName=" + getAuthorName() + ", testName=" + getTitle() + ", course="
+				+ getCourse() + ", testDuration=" + testDuration + ", pointsPerQuestion=" + pointsPerQuestion
+				+ ", instructions=" + studentInstructions + ", teacherInstructions=" + teacherInstructions + ", field="
+				+ field + "]";
 	}
 
 }
