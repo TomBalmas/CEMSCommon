@@ -5,11 +5,9 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class Question implements Serializable {
-	
+
 	private String id;
 	private String author;
-	private String instructionsForTeacher;
-	private String instructionsForStudents;
 	private String questionText;
 	private int correctAnswer;
 	private ArrayList<String> answers = new ArrayList<>();
@@ -39,24 +37,14 @@ public class Question implements Serializable {
 		this.field = field;
 	}
 
-	public Question(String id, String author, String instructionsForTeacher, String instructionsForStudents,
-			String questionText, int correctAnswer, String field, ArrayList<String> answers) {
+	public Question(String id, String author, String questionText, int correctAnswer, String field,
+			ArrayList<String> answers) {
 		this.id = id;
 		this.author = author;
-		this.instructionsForTeacher = instructionsForTeacher;
-		this.instructionsForStudents = instructionsForStudents;
 		this.questionText = questionText;
 		this.correctAnswer = correctAnswer;
 		this.field = field;
 		this.answers = answers;
-	}
-
-	public String getInstructionsForTeacher() {
-		return instructionsForTeacher;
-	}
-
-	public String getInstructionsForStudents() {
-		return instructionsForStudents;
 	}
 
 	public String getQuestionText() {
