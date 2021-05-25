@@ -59,4 +59,16 @@ public class Question implements Serializable {
 		return answers;
 	}
 
+	@Override
+	public boolean equals(Object arg0) {
+		if (arg0 instanceof Question)
+			return ((Question) arg0).getID().equals(id);
+		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return id.hashCode();
+	}
+
 }
