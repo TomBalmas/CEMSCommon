@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Teacher extends User {
-	private List<String> fields;
+	private String fields;
 	private List<ScheduledTest> scheduledTests = new ArrayList<ScheduledTest>();
 
-	public List<String> getFields() {
+	public String getFields() {
 		return fields;
 	}
-	
+
 	/**
 	 * adds a test to the scheduled tests list
 	 * 
@@ -19,12 +19,12 @@ public class Teacher extends User {
 	 * @return false if test wasn't added
 	 */
 	public boolean addScheduledTest(ScheduledTest test) {
-		if(scheduledTests.contains(test))
+		if (scheduledTests.contains(test))
 			return false;
 		scheduledTests.add(test);
 		return true;
 	}
-	
+
 	/**
 	 * removes a test from the scheduled tests list
 	 * 
@@ -33,20 +33,18 @@ public class Teacher extends User {
 	 * @return false if test was not found
 	 */
 	public boolean removeScheduledTest(ScheduledTest test) {
-		for(ScheduledTest toRemove : scheduledTests)
-			if(toRemove.equals(test)) {
+		for (ScheduledTest toRemove : scheduledTests)
+			if (toRemove.equals(test)) {
 				scheduledTests.remove(toRemove);
 				return true;
 			}
 		return false;
 	}
 
-	public Teacher(String ssn, String name, String surName, String email, String userName, String password,String fields) {
+	public Teacher(String ssn, String name, String surName, String email, String userName, String password,
+			String fields) {
 		super(ssn, name, surName, email, userName, password);
-		String[] arr = fields.split(":");
-		this.fields=new ArrayList<String>();
-		for(String field: arr)
-			this.fields.add(field);
+		this.fields = fields;
 	}
 
 	public String toString() {
