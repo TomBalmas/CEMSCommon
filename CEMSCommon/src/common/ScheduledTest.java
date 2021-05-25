@@ -8,15 +8,15 @@ public class ScheduledTest extends AbstractTest {
 	private Date date;
 	private Time startingTime;
 	private int duration;
-	private int belongsTo; // id of the teacher that scheduled the test
+	private String belongsToID; // id of the teacher that scheduled the test
 
-	public ScheduledTest(int ID, String authorName, String testName, String course, Date date, Time startingTime,
-			Integer duration, Integer belongsTo) {
-		super(ID, authorName, testName, course);
+	public ScheduledTest(String id, String authorName, String title, String course, Date date, Time startingTime,
+			Integer duration, String belongsToID) {
+		super(id, authorName, title, course);
 		this.date = date;
 		this.startingTime = startingTime;
 		this.duration = duration;
-		this.belongsTo = belongsTo;
+		this.belongsToID = belongsToID;
 	}
 
 	public Date getDate() {
@@ -43,12 +43,12 @@ public class ScheduledTest extends AbstractTest {
 		this.duration = duration;
 	}
 
-	public int getBelongsTo() {
-		return belongsTo;
+	public String getBelongsToID() {
+		return belongsToID;
 	}
 
-	public void setBelongsTo(int belongsTo) {
-		this.belongsTo = belongsTo;
+	public void setBelongsToID(String belongsToID) {
+		this.belongsToID = belongsToID;
 	}
 
 }

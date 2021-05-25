@@ -6,10 +6,10 @@ public class ActiveTest extends AbstractTest {
 	private String endTimeTest;
 	private String field;
 
-	public ActiveTest(int ID, String authorName, String title, String course, String field, String startTimeTest,
+	public ActiveTest(String id, String authorName, String title, String course, String field, String startTimeTest,
 			String endTimeTest) {
 
-		super(ID, authorName, title, course);
+		super(id, authorName, title, course);
 		this.field = field;
 		this.startTimeTest = startTimeTest;
 		this.endTimeTest = endTimeTest;
