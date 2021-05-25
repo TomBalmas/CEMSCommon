@@ -2,7 +2,7 @@ package common;
 
 public class ActiveTest extends AbstractTest {
 
-	private String startTimeTest;
+	private String startTimeTest; 
 	private String endTimeTest;
 	private String field;
 
@@ -25,12 +25,6 @@ public class ActiveTest extends AbstractTest {
 
 	public String getField() {
 		return field;
-	}
-
-	@Override
-	public String toString() {
-		return getID() + ":" + getTitle() + ":" + getAuthorName() + ":" + getCourse() + ":" + startTimeTest + ":"
-				+ endTimeTest + ":" + field;
 	}
 
 }
