@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class Question implements Serializable {
-	
+
 	private String id;
 	private String author;
 	private String instructionsForTeacher;
@@ -69,6 +69,18 @@ public class Question implements Serializable {
 
 	public ArrayList<String> getAnswers() {
 		return answers;
+	}
+
+	@Override
+	public boolean equals(Object arg0) {
+		if (arg0 instanceof Question)
+			return ((Question) arg0).getID().equals(id);
+		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return id.hashCode();
 	}
 
 }
