@@ -7,7 +7,7 @@ public class Test extends AbstractTest {
 
 	private Integer testDuration;
 	private Integer pointsPerQuestion;
-	private String instructions;
+	private String studentInstructions;
 	private ArrayList<String> questions;
 	private String teacherInstructions;
 	private String field;
@@ -17,11 +17,12 @@ public class Test extends AbstractTest {
 	}
 
 	public Test(String id, String authorName, String title, String course, Integer testDuration,
-			Integer pointsPerQuestion, String instructions, String teacherInstructions, String questionsString, String field) {
+			Integer pointsPerQuestion, String studentInstructions, String teacherInstructions, String questionsString,
+			String field) {
 		super(id, authorName, title, course);
 		this.testDuration = testDuration;
 		this.pointsPerQuestion = pointsPerQuestion;
-		this.instructions = instructions;
+		this.studentInstructions = studentInstructions;
 		this.teacherInstructions = teacherInstructions;
 		this.field = field;
 		this.questions = new ArrayList<>();
@@ -36,9 +37,10 @@ public class Test extends AbstractTest {
 
 	@Override
 	public String toString() {
-		return "Test [ID=" + getID() + ", authorName=" + getAuthorName() + ", testName=" + getTitle() + ", course=" + getCourse()
-				+ ", testDuration=" + testDuration + ", pointsPerQuestion=" + pointsPerQuestion + ", instructions="
-				+ instructions + ", teacherInstructions=" + teacherInstructions + ", field=" + field + "]";
+		return "Test [ID=" + getID() + ", authorName=" + getAuthorName() + ", testName=" + getTitle() + ", course="
+				+ getCourse() + ", testDuration=" + testDuration + ", pointsPerQuestion=" + pointsPerQuestion
+				+ ", instructions=" + studentInstructions + ", teacherInstructions=" + teacherInstructions + ", field="
+				+ field + "]";
 	}
 
 }
