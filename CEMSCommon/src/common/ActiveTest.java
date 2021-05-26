@@ -46,5 +46,4 @@ public class ActiveTest extends AbstractTest {
 		return getID() + "," + getTitle() + "," + getAuthorName() + "," + getCourse() + "," + startingTime + ","
 				+ field;
 	}
-
 }
