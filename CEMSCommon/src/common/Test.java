@@ -35,6 +35,24 @@ public class Test extends AbstractTest {
 		return questions;
 	}
 
+	
+	
+	public Integer getTestDuration() {
+		return testDuration;
+	}
+
+	public Integer getPointsPerQuestion() {
+		return pointsPerQuestion;
+	}
+
+	public String getStudentInstructions() {
+		return studentInstructions;
+	}
+
+	public String getTeacherInstructions() {
+		return teacherInstructions;
+	}
+
 	@Override
 	public String toString() {
 		return "Test [ID=" + getID() + ", authorName=" + getAuthorName() + ", testName=" + getTitle() + ", course="
