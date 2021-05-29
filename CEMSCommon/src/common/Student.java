@@ -11,7 +11,7 @@ public class Student extends User {
 	}
 
 	public String toString() {
-		return String.format("Student: %d, %s, %s, %s, %s, %s", getSSN(), getName(), getSurName(), getEmail(),
+		return String.format("Student: %s, %s, %s, %s, %s, %s", getSSN(), getName(), getSurName(), getEmail(),
 				getUserName(), getPassword());
 	}
 
