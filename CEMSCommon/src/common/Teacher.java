@@ -48,7 +48,7 @@ public class Teacher extends User {
 	}
 
 	public String toString() {
-		return String.format("Teacher:%d,%s,%s,%s,%s,%s", getSSN(), getName(), getSurName(), getEmail(), getUserName(),
+		return String.format("Teacher:%s,%s,%s,%s,%s,%s", getSSN(), getName(), getSurName(), getEmail(), getUserName(),
 				getPassword());
 	}
 

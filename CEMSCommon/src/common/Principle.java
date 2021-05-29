@@ -7,7 +7,7 @@ public class Principle extends User{
 	}
 	
 	public String toString() {
-		return String.format("Principle:%d,%s,%s,%s,%s,%s", getSSN(), getName(), getSurName(), getEmail(),
+		return String.format("Principle:%s,%s,%s,%s,%s,%s", getSSN(), getName(), getSurName(), getEmail(),
 				getUserName(), getPassword());
 	}
 
