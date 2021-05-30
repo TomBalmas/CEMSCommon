@@ -7,7 +7,7 @@ import java.util.Hashtable;
 public class Question implements Serializable {
 
 	private String id;
-	private String author;
+	private String authorID;
 	private String questionText;
 	private int correctAnswer;
 	private ArrayList<String> answers = new ArrayList<>();
@@ -17,8 +17,8 @@ public class Question implements Serializable {
 		return field;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getAuthorID() {
+		return authorID;
 	}
 
 	public String getID() {
@@ -30,7 +30,7 @@ public class Question implements Serializable {
 	}
 
 	public void setAuthor(String author) {
-		this.author = author;
+		this.authorID = author;
 	}
 
 	public void setField(String field) {
@@ -40,7 +40,7 @@ public class Question implements Serializable {
 	public Question(String id, String author, String questionText, int correctAnswer, String field,
 			ArrayList<String> answers) {
 		this.id = id;
-		this.author = author;
+		this.authorID = author;
 		this.questionText = questionText;
 		this.correctAnswer = correctAnswer;
 		this.field = field;
