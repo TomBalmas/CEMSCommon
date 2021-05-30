@@ -1,6 +1,8 @@
 package common;
 
-public class TimeExtensionRequest {
+import java.io.Serializable;
+
+public class TimeExtensionRequest implements Serializable {
 	
 	String ssn;
 	String content;
