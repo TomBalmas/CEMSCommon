@@ -1,6 +1,8 @@
 package common;
 
-public class Report {
+import java.io.Serializable;
+
+public class Report implements Serializable {
 	String id;
 	String testId;
 	int numberOfStudents;
