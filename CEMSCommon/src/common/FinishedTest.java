@@ -6,18 +6,38 @@ public class FinishedTest extends AbstractTest {
 	private String studentSSN;
 	private String date;
 	private String startingTime;
+	private int timeTaken;
+	private String presentationMethod;
 	private int grade;
 	private String status;
 
 	public FinishedTest(String id, String authorName, String title, String course, String teacherSSN, String studentSSN,
-			String date, String startingTime, int grade, String status) {
+			String date, String startingTime, int timeTaken, String presentationMethod, int grade, String status) {
 		super(id, authorName, title, course);
 		this.teacherSSN = teacherSSN;
 		this.studentSSN = studentSSN;
 		this.date = date;
 		this.startingTime = startingTime;
+		this.timeTaken = timeTaken;
+		this.presentationMethod = presentationMethod;
 		this.grade = grade;
 		this.status = status;
+	}
+
+	public int getTimeTaken() {
+		return timeTaken;
+	}
+
+	public void setTimeTaken(int timeTaken) {
+		this.timeTaken = timeTaken;
+	}
+
+	public String getPresentationMethod() {
+		return presentationMethod;
+	}
+
+	public void setPresentationMethod(String presentationMethod) {
+		this.presentationMethod = presentationMethod;
 	}
 
 	public String getTeacherSSN() {
