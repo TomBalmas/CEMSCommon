@@ -43,7 +43,7 @@ public class ActiveTest extends AbstractTest {
 
 	@Override
 	public String toString() {
-		return getID() + "," + getTitle() + "," + getAuthorName() + "," + getCourse() + "," + startingTime + ","
-				+ field;
+		return getID() + "," + getAuthorName() + "," + getTitle() + "," + getCourse() + "," + field + ","
+				+ startingTime + "," + finishTime + "," + code;
 	}
 }
