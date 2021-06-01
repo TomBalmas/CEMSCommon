@@ -2,27 +2,41 @@ package common;
 
 import java.io.Serializable;
 
-public class Course implements Serializable{
-	
-	private String courseName;
-	
+public class Course implements Serializable {
 
-	public Course(String courseName) {
-		this.courseName = courseName;
+	private String id;
+	private String name;
+	private String field;
+
+
+	public Course(String id, String name, String field) {
+		this.id = id;
+		this.name = name;
+		this.field = field;
 	}
 
-
-	public String getCourseName() {
-		return courseName;
+	public String getId() {
+		return id;
 	}
 
-
-	public void setCourseName(String courseName) {
-		this.courseName = courseName;
+	public void setId(String id) {
+		this.id = id;
 	}
-	
-	
-	
-	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getField() {
+		return field;
+	}
+
+	public void setField(String field) {
+		this.field = field;
+	}
 
 }
