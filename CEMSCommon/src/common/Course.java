@@ -39,4 +39,9 @@ public class Course implements Serializable {
 		this.field = field;
 	}
 
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", name=" + name + ", field=" + field + "]";
+	}
+
 }
