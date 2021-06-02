@@ -1,8 +1,12 @@
 package common;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+
+import javafx.util.Pair;
 
 public class Report implements Serializable {
+	ArrayList<Pair<String, Integer>> testsAndGrades;
 	String id;
 	String testId;
 	int numberOfStudents;
@@ -18,6 +22,25 @@ public class Report implements Serializable {
 	int AMinus; // 90-94
 	int APlus; // 95-100
 	
+	/**
+	 * report for teacher
+	 */
+	public Report() {
+		
+	}
+
+	/**
+	 * report for a student
+	 */
+	public Report(ArrayList<Pair<String, Integer>> testsAndGrades, Double average, Double median) {
+		this.testsAndGrades.addAll(testsAndGrades);
+		this.average = average;
+		this.median = median;
+	}
+
+	/**
+	 * report for a test
+	 */
 	public Report(String id, String testId, int numberOfStudents, double average, double median, int f, int dMinus,
 			int dPlus, int cMinus, int cPlus, int bMinus, int bPlus, int aMinus, int aPlus) {
 		this.id = id;
@@ -147,5 +170,5 @@ public class Report implements Serializable {
 	public void setAPlus(int aPlus) {
 		APlus = aPlus;
 	}
-	
+
 }
