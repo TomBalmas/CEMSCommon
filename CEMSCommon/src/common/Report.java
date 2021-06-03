@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import javafx.util.Pair;
 
 public class Report implements Serializable {
-	ArrayList<Pair<String, Integer>> testsAndGrades;
-	String id;
-	String testId;
+	ArrayList<Pair<String,Pair<Double,Double>>> testsAveragesMedians;	//for teacher report
+	ArrayList<Pair<String, Integer>> testsAndGrades;	//for student report
+	String id;	//report id
+	String testId;	//test id
 	int numberOfStudents;
 	double average;
 	double median;
@@ -23,10 +24,12 @@ public class Report implements Serializable {
 	int APlus; // 95-100
 	
 	/**
-	 * report for teacher
+	 * report for teacher or course
 	 */
-	public Report() {
-		
+	public Report(Double averageOfAverages, Double medianOfMedians, ArrayList<Pair<String,Pair<Double,Double>>> testsAveragesMedians) {
+		this.testsAveragesMedians = testsAveragesMedians;
+		average = averageOfAverages;
+		median = medianOfMedians;
 	}
 
 	/**
@@ -57,6 +60,14 @@ public class Report implements Serializable {
 		BPlus = bPlus;
 		AMinus = aMinus;
 		APlus = aPlus;
+	}
+
+	public ArrayList<Pair<String, Pair<Double, Double>>> getTestsAveragesMedians() {
+		return testsAveragesMedians;
+	}
+
+	public void setTestsAveragesMedians(ArrayList<Pair<String, Pair<Double, Double>>> testsAndAveragesAndMedians) {
+		this.testsAveragesMedians = testsAndAveragesAndMedians;
 	}
 
 	public ArrayList<Pair<String, Integer>> getTestsAndGrades() {
