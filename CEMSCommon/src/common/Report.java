@@ -59,6 +59,14 @@ public class Report implements Serializable {
 		APlus = aPlus;
 	}
 
+	public ArrayList<Pair<String, Integer>> getTestsAndGrades() {
+		return testsAndGrades;
+	}
+
+	public void setTestsAndGrades(ArrayList<Pair<String, Integer>> testsAndGrades) {
+		this.testsAndGrades = testsAndGrades;
+	}
+
 	public String getId() {
 		return id;
 	}
