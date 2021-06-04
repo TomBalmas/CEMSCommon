@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import javafx.util.Pair;
 
 public class Report implements Serializable {
-	ArrayList<Pair<String,Pair<Double,Double>>> testsAveragesMedians = new ArrayList<>();	//for teacher report
-	ArrayList<Pair<String, Integer>> testsAndGrades = new ArrayList<>();	//for student report
-	String id;	//report id
-	String testId;	//test id
+	ArrayList<Pair<String, Pair<Double, Double>>> testsAveragesMedians = new ArrayList<>(); // for teacher or course
+																							// report
+	ArrayList<Pair<String, Integer>> testsAndGrades = new ArrayList<>(); // for student report
+	String id; // report id
+	String testId; // test id
 	int numberOfStudents;
 	double average;
 	double median;
@@ -22,11 +23,17 @@ public class Report implements Serializable {
 	int BPlus; // 85-89
 	int AMinus; // 90-94
 	int APlus; // 95-100
-	
+	boolean flag = true; // tells if the report exists
+
+	public Report() {
+		flag = false;
+	}
+
 	/**
 	 * report for teacher or course
 	 */
-	public Report(Double averageOfAverages, Double medianOfMedians, ArrayList<Pair<String,Pair<Double,Double>>> testsAveragesMedians) {
+	public Report(Double averageOfAverages, Double medianOfMedians,
+			ArrayList<Pair<String, Pair<Double, Double>>> testsAveragesMedians) {
 		this.testsAveragesMedians = testsAveragesMedians;
 		average = averageOfAverages;
 		median = medianOfMedians;
@@ -36,8 +43,8 @@ public class Report implements Serializable {
 	 * report for a student
 	 */
 	public Report(ArrayList<Pair<String, Integer>> testsAndGrades, Double average, Double median) {
-		for(Pair<String,Integer> testAndGrade : testsAndGrades)
-				this.testsAndGrades.add(testAndGrade);
+		for (Pair<String, Integer> testAndGrade : testsAndGrades)
+			this.testsAndGrades.add(testAndGrade);
 		this.average = average;
 		this.median = median;
 	}
@@ -61,6 +68,14 @@ public class Report implements Serializable {
 		BPlus = bPlus;
 		AMinus = aMinus;
 		APlus = aPlus;
+	}
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
 	}
 
 	public ArrayList<Pair<String, Pair<Double, Double>>> getTestsAveragesMedians() {
