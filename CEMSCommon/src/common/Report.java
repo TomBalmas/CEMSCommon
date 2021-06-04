@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import javafx.util.Pair;
 
 public class Report implements Serializable {
-	ArrayList<Pair<String,Pair<Double,Double>>> testsAveragesMedians;	//for teacher report
-	ArrayList<Pair<String, Integer>> testsAndGrades;	//for student report
+	ArrayList<Pair<String,Pair<Double,Double>>> testsAveragesMedians = new ArrayList<>();	//for teacher report
+	ArrayList<Pair<String, Integer>> testsAndGrades = new ArrayList<>();	//for student report
 	String id;	//report id
 	String testId;	//test id
 	int numberOfStudents;
@@ -36,7 +36,8 @@ public class Report implements Serializable {
 	 * report for a student
 	 */
 	public Report(ArrayList<Pair<String, Integer>> testsAndGrades, Double average, Double median) {
-		this.testsAndGrades.addAll(testsAndGrades);
+		for(Pair<String,Integer> testAndGrade : testsAndGrades)
+				this.testsAndGrades.add(testAndGrade);
 		this.average = average;
 		this.median = median;
 	}
@@ -188,6 +189,15 @@ public class Report implements Serializable {
 
 	public void setAPlus(int aPlus) {
 		APlus = aPlus;
+	}
+
+	@Override
+	public String toString() {
+		return "Report [testsAveragesMedians=" + testsAveragesMedians + ", testsAndGrades=" + testsAndGrades + ", id="
+				+ id + ", testId=" + testId + ", numberOfStudents=" + numberOfStudents + ", average=" + average
+				+ ", median=" + median + ", F=" + F + ", DMinus=" + DMinus + ", DPlus=" + DPlus + ", CMinus=" + CMinus
+				+ ", CPlus=" + CPlus + ", BMinus=" + BMinus + ", BPlus=" + BPlus + ", AMinus=" + AMinus + ", APlus="
+				+ APlus + "]";
 	}
 
 }
