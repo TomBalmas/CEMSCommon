@@ -10,6 +10,9 @@ public abstract class User implements Serializable{
 	private String userName;
 	private String password;
 	
+	public User() {
+	}
+	
 	public User(String ssn, String name, String surName,  String email, String userName, String password) {
 		this.ssn = ssn;
 		this.name = name;
