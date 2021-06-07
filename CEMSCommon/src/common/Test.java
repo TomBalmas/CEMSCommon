@@ -11,9 +11,10 @@ public class Test extends AbstractTest {
 	private ArrayList<String> questions;
 	private String teacherInstructions;
 	private String field;
-
-	public String getField() {
-		return field;
+	private boolean flag = true;
+	
+	public Test() {
+		flag=false;
 	}
 
 	public Test(String id, String authorName, String title, String course, Integer testDuration,
@@ -29,6 +30,18 @@ public class Test extends AbstractTest {
 		String[] questions = questionsString.split("~");
 		for (String question : questions)
 			this.questions.add(question);
+	}
+	
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
+	}
+
+	public String getField() {
+		return field;
 	}
 
 	public List<String> getQuestions() {
