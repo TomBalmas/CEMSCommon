@@ -2,18 +2,30 @@ package common;
 
 import java.io.Serializable;
 
-public class StudentGrade implements Serializable{
+public class StudentGrade implements Serializable {
 	private String testId;
 	private String course;
 	private String title;
 	private int grade;
+	private boolean flag = true;
 	
+	public StudentGrade() {
+		flag = false;
+	}
+
 	public StudentGrade(String testId, String course, String title, int grade) {
-		super();
 		this.testId = testId;
 		this.course = course;
 		this.title = title;
 		this.grade = grade;
+	}
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
 	}
 
 	public String getTestId() {
@@ -47,7 +59,10 @@ public class StudentGrade implements Serializable{
 	public void setGrade(int grade) {
 		this.grade = grade;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "StudentGrade [testId=" + testId + ", course=" + course + ", title=" + title + ", grade=" + grade + "]";
+	}
+
 }
