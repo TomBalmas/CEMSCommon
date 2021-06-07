@@ -7,12 +7,24 @@ public class Course implements Serializable {
 	private String id;
 	private String name;
 	private String field;
-
+	private boolean flag = true;
+	
+	public Course() {
+		flag = false;
+	}
 
 	public Course(String id, String name, String field) {
 		this.id = id;
 		this.name = name;
 		this.field = field;
+	}
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
 	}
 
 	public String getId() {
