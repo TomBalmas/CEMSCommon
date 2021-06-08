@@ -5,14 +5,26 @@ import java.io.Serializable;
 public class TestFile implements Serializable {
 	public byte[] byteArray;
 	String fileName = null;
+	String filePath = null;
 	int size = 0;
+
+	public void setFileName(String filePath) {
+		this.filePath = filePath;
+		String[] split = filePath.split(":");
+		fileName = split[1].substring(0, split[1].length() - 1);
+
+	}
+
+	public String getFilePath() {
+		return filePath;
+	}
+
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
 
 	public String getFileName() {
 		return fileName;
-	}
-
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
 	}
 
 	public TestFile(String fileName) {
