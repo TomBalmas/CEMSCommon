@@ -8,11 +8,10 @@ public class TestFile implements Serializable {
 	String filePath = null;
 	int size = 0;
 
-	public void setFileName(String filePath) {
+	public TestFile(String fileName) {
 		this.filePath = filePath;
 		String[] split = filePath.split(":");
 		fileName = split[1].substring(0, split[1].length() - 1);
-
 	}
 
 	public String getFilePath() {
@@ -25,10 +24,6 @@ public class TestFile implements Serializable {
 
 	public String getFileName() {
 		return fileName;
-	}
-
-	public TestFile(String fileName) {
-		this.fileName = fileName;
 	}
 
 	public void initArray(int size) {
