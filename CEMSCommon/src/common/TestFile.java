@@ -7,6 +7,14 @@ public class TestFile implements Serializable {
 	String fileName = null;
 	int size = 0;
 
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
 	public TestFile(String fileName) {
 		this.fileName = fileName;
 	}
