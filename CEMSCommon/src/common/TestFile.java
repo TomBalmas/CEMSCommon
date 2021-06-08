@@ -15,8 +15,7 @@ public class TestFile implements Serializable {
 
 	public TestFile(String filePath) {
 		this.filePath = filePath;
-		String[] split = filePath.split(":");
-		fileName = split[1].substring(0, split[1].length() - 1);
+		fileName = filePath.substring(filePath.lastIndexOf("/"), filePath.length()-1);
 	}
 	
 
