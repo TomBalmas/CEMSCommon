@@ -3,15 +3,33 @@ package common;
 import java.io.Serializable;
 
 public class TestFile implements Serializable {
-	public byte[] byteArray;
-	String fileName = null;
-	String filePath = null;
-	int size = 0;
+	private byte[] byteArray;
+	private String fileName = null;
+	private String filePath = null;
+	private int size = 0;
+	private boolean flag = true;
+
+	public TestFile() {
+
+	}
 
 	public TestFile(String filePath) {
 		this.filePath = filePath;
 		String[] split = filePath.split(":");
 		fileName = split[1].substring(0, split[1].length() - 1);
+	}
+	
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 
 	public String getFilePath() {
