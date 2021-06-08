@@ -8,7 +8,7 @@ public class TestFile implements Serializable {
 	String filePath = null;
 	int size = 0;
 
-	public TestFile(String fileName) {
+	public TestFile(String filePath) {
 		this.filePath = filePath;
 		String[] split = filePath.split(":");
 		fileName = split[1].substring(0, split[1].length() - 1);
