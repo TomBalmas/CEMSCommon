@@ -7,17 +7,28 @@ public class StudentGrade implements Serializable {
 	private String course;
 	private String title;
 	private int grade;
+	private String teacherNotes;
 	private boolean flag = true;
 	
 	public StudentGrade() {
 		flag = false;
 	}
 
-	public StudentGrade(String testId, String course, String title, int grade) {
+	public StudentGrade(String testId, String course, String title, int grade, String teacherNotes) {
 		this.testId = testId;
 		this.course = course;
 		this.title = title;
 		this.grade = grade;
+		this.teacherNotes = teacherNotes;
+	}
+	
+
+	public String getTeacherNotes() {
+		return teacherNotes;
+	}
+
+	public void setTeacherNotes(String teacherNotes) {
+		this.teacherNotes = teacherNotes;
 	}
 
 	public boolean isFlag() {
