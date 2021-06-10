@@ -10,6 +10,11 @@ public class FinishedTest extends AbstractTest {
 	private String presentationMethod;
 	private int grade;
 	private String status;
+	private boolean flag = true;
+
+	public FinishedTest() {
+		flag = false;
+	}
 
 	public FinishedTest(String id, String authorName, String title, String course, String teacherSSN, String studentSSN,
 			String date, String startingTime, int timeTaken, String presentationMethod, int grade, String status) {
@@ -22,6 +27,14 @@ public class FinishedTest extends AbstractTest {
 		this.presentationMethod = presentationMethod;
 		this.grade = grade;
 		this.status = status;
+	}
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
 	}
 
 	public int getTimeTaken() {
