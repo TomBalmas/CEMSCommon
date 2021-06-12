@@ -10,7 +10,6 @@ public class TestFile implements Serializable {
 	private boolean flag = true;
 
 	public TestFile() {
-
 	}
 
 	public TestFile(String filePath) {
