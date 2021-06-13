@@ -11,6 +11,8 @@ public class Report implements Serializable {
 	ArrayList<Pair<String, Integer>> testsAndGrades = new ArrayList<>(); // for student report
 	String id; // report id
 	String testId; // test id
+	String date; // date of the test
+	String startingTime; // starting time of the test
 	int numberOfStudents;
 	double average;
 	double median;
@@ -52,13 +54,16 @@ public class Report implements Serializable {
 	/**
 	 * report for a test
 	 */
-	public Report(String id, String testId, int numberOfStudents, double average, double median, int f, int dMinus,
-			int dPlus, int cMinus, int cPlus, int bMinus, int bPlus, int aMinus, int aPlus) {
+	public Report(String id, String testId, String date, String startingTime, int numberOfStudents, double average,
+			double median, int f, int dMinus, int dPlus, int cMinus, int cPlus, int bMinus, int bPlus, int aMinus,
+			int aPlus) {
 		this.id = id;
 		this.testId = testId;
 		this.numberOfStudents = numberOfStudents;
 		this.average = average;
 		this.median = median;
+		this.date = date;
+		this.startingTime = startingTime;
 		F = f;
 		DMinus = dMinus;
 		DPlus = dPlus;
@@ -68,6 +73,22 @@ public class Report implements Serializable {
 		BPlus = bPlus;
 		AMinus = aMinus;
 		APlus = aPlus;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getStartingTime() {
+		return startingTime;
+	}
+
+	public void setStartingTime(String startingTime) {
+		this.startingTime = startingTime;
 	}
 
 	public boolean isFlag() {
