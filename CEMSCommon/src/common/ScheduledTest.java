@@ -1,8 +1,10 @@
 package common;
 
-import java.sql.Date;
-import java.sql.Time;
-
+/**
+ * contains data about a scheduled test that was scheduled by a teacher
+ * including her ID
+ *
+ */
 public class ScheduledTest extends AbstractTest {
 
 	private String date;

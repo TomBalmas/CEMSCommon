@@ -1,5 +1,9 @@
 package common;
 
+/**
+ * contains data about a scheduled test that is currently being taken by students.
+ *
+ */
 public class ActiveTest extends AbstractTest {
 
 	private String startingTime;

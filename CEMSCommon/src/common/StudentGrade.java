@@ -2,6 +2,10 @@ package common;
 
 import java.io.Serializable;
 
+/**
+ * contains data about the students grade in a test he took
+ *
+ */
 public class StudentGrade implements Serializable {
 	private String testId;
 	private String course;
@@ -9,7 +13,7 @@ public class StudentGrade implements Serializable {
 	private int grade;
 	private String teacherNotes;
 	private boolean flag = true;
-	
+
 	public StudentGrade() {
 		flag = false;
 	}
@@ -21,7 +25,6 @@ public class StudentGrade implements Serializable {
 		this.grade = grade;
 		this.teacherNotes = teacherNotes;
 	}
-	
 
 	public String getTeacherNotes() {
 		return teacherNotes;

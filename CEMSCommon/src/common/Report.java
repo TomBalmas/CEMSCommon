@@ -5,6 +5,10 @@ import java.util.ArrayList;
 
 import javafx.util.Pair;
 
+/**
+ * contains report data for 3 types of reports.Tests, teachers and course report
+ *
+ */
 public class Report implements Serializable {
 	ArrayList<Pair<String, Pair<Double, Double>>> testsAveragesMedians = new ArrayList<>(); // for teacher or course
 																							// report

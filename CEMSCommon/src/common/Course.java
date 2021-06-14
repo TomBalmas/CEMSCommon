@@ -2,6 +2,10 @@ package common;
 
 import java.io.Serializable;
 
+/**
+ * contains data about a course 
+ *
+ */
 public class Course implements Serializable {
 
 	private String id;

@@ -2,6 +2,10 @@ package common;
 
 import java.io.Serializable;
 
+/**
+ * contains general information that is relevant to all test types.
+ *
+ */
 public abstract class AbstractTest implements Serializable {
 
 	private String id;

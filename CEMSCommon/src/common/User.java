@@ -2,18 +2,22 @@ package common;
 
 import java.io.Serializable;
 
-public abstract class User implements Serializable{
+/**
+ * this class contains all the data relevant for all user types.teacher student and principle
+ *
+ */
+public abstract class User implements Serializable {
 	private String ssn;
 	private String name;
 	private String surName;
 	private String email;
 	private String userName;
 	private String password;
-	
+
 	public User() {
 	}
-	
-	public User(String ssn, String name, String surName,  String email, String userName, String password) {
+
+	public User(String ssn, String name, String surName, String email, String userName, String password) {
 		this.ssn = ssn;
 		this.name = name;
 		this.surName = surName;
@@ -45,6 +49,5 @@ public abstract class User implements Serializable{
 	public String getPassword() {
 		return password;
 	}
-	 
-	
+
 }

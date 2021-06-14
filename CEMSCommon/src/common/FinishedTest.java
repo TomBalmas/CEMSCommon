@@ -1,5 +1,10 @@
 package common;
 
+/**
+ * this class contains data about a students scheduled test that is finished.
+ * also contains if the student submitted on time or forcedly because time finished
+ *
+ */
 public class FinishedTest extends AbstractTest {
 
 	private String teacherSSN;

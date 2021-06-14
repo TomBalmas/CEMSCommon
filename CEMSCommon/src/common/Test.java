@@ -3,6 +3,10 @@ package common;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class holds information about the test.
+ *
+ */
 public class Test extends AbstractTest {
 
 	private Integer testDuration;
@@ -12,9 +16,9 @@ public class Test extends AbstractTest {
 	private String teacherInstructions;
 	private String field;
 	private boolean flag = true;
-	
+
 	public Test() {
-		flag=false;
+		flag = false;
 	}
 
 	public Test(String id, String authorName, String title, String course, Integer testDuration,
@@ -31,7 +35,7 @@ public class Test extends AbstractTest {
 		for (String question : questions)
 			this.questions.add(question);
 	}
-	
+
 	public boolean isFlag() {
 		return flag;
 	}
@@ -48,8 +52,6 @@ public class Test extends AbstractTest {
 		return questions;
 	}
 
-	
-	
 	public Integer getTestDuration() {
 		return testDuration;
 	}

@@ -2,8 +2,11 @@ package common;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Hashtable;
 
+/**
+ * this class contains data about a question.To be presented in question form
+ *
+ */
 public class Question implements Serializable {
 
 	private String id;

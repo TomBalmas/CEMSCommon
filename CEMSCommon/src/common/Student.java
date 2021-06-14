@@ -3,6 +3,10 @@ package common;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * @author irbte
+ *
+ */
 public class Student extends User {
 	private ArrayList<Test> tests = new ArrayList<>();
 	private boolean flag = true;

@@ -1,5 +1,9 @@
 package common;
 
+/**
+ * principle data.
+ *
+ */
 public class Principle extends User{
 
 	public Principle(String ssn, String name, String surName, String userName, String email, String password) {
