@@ -3,6 +3,10 @@ package common;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * contains all teacher data:fields and her scheduled tests
+ *
+ */
 public class Teacher extends User {
 	private String fields;
 	private List<ScheduledTest> scheduledTests = new ArrayList<ScheduledTest>();

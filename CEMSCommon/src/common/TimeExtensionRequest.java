@@ -2,6 +2,11 @@ package common;
 
 import java.io.Serializable;
 
+/**
+ * this class contains information relevant to time extension request for a
+ * specific that is being done
+ *
+ */
 public class TimeExtensionRequest implements Serializable {
 
 	String ssn;

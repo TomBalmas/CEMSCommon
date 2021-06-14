@@ -2,6 +2,10 @@ package common;
 
 import java.io.Serializable;
 
+/**
+ * this class contains the test file for a manual test and other relevant data
+ *
+ */
 public class TestFile implements Serializable {
 	private byte[] byteArray;
 	private String fileName = null;
@@ -14,9 +18,8 @@ public class TestFile implements Serializable {
 
 	public TestFile(String filePath) {
 		this.filePath = filePath;
-		fileName = filePath.substring(filePath.lastIndexOf("/"), filePath.length()-1);
+		fileName = filePath.substring(filePath.lastIndexOf("/"), filePath.length() - 1);
 	}
-	
 
 	public boolean isFlag() {
 		return flag;
